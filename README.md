@@ -1,4 +1,4 @@
-# A brief introduction to EMS (Ethereum Name Services)
+# A brief introduction to ENS (Ethereum Name Services)
 
 An Internet without Domain Name Service (DNS) is hardly imaginable. Addressing resources directly on the basis of their IP address would be a difficult and an error-prone undertaking. How nice it is that there is a Domain Name Service (DNS) that makes the mapping between machine-readable IP addresses and easily understandable memorable names for humans. With the help of DNS, we can easily locate resources on the Internet, even if their IP addresses have changed in background.
 
@@ -6,7 +6,7 @@ A similar function as DNS on the Internet, is ENS on the Ethereum blockchain. Re
 
 The core elements of the Ethereum Name Service are specified in EIP-137. These are the core elements:
 
-+ EMS-Registry
++ ENS-Registry
 + Resolvers
 + Registrars
 
@@ -33,7 +33,7 @@ The hash of 'earth.planets.eth' is calculated as follows:
 sha3(sha3('eth') + sha3(sha3('planets') + sha3('0x0000000000000000000000000000000000000000000000000000000000000000' + sha3('earth'))))
 ```
 ## Reverse Name Resolution
-In addition to mapping a domain name to its resources such as address, ABI or publickey, ENS also supports reverse mapping from an address to its domain name. The procedure for this is described in EIP-160. For reverse mapping, the resource address is registered under the reverse domain name 'address'.addr.reverse. The resovler for the reverse domain name holds the name of the original domain. The registrar of the domain 'addr.reverse' provids a function setName('domain') under which a caller registers his domain-name.
+In addition to mapping a domain name to its resources such as address, ABI or publickey, ENS also supports reverse mapping from an address to its domain name. The procedure for this is described in EIP-160. For reverse mapping, the resource address is registered under the reverse domain name 'address'.addr.reverse. The resolver for the reverse domain name holds the name of the original domain. The registrar of the domain 'addr.reverse' provides a function setName('domain') under which a caller registers his domain-name.
 
 ## Example
 The following example shows how to install ENS including a registrar for reverse name resolution. Deploying all contracts requires a working truffle environment and access to an Ethereum node such as Ganache.
