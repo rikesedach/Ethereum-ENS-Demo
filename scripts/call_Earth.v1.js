@@ -1,7 +1,7 @@
 const ENS = require('ethereum-ens');
 var Web3 = require('web3');
 
-const ensAddr = "0xC53a9934eC2eA741656786781ae513ddDD4Ef2BB";
+const ensAddr = "0xE7cd3599165d3333a1B012DD51e82C4ad6a9692e";
 
 const providerURL = "http://localhost:8545"
 var provider = new Web3.providers.HttpProvider(providerURL);

@@ -14,7 +14,7 @@ module.exports = async function(deployer, network, accounts) {
 
     console.log("== Deploy Earth");
     const earthhNode = namehash('earth.planet.eth');
-    const earth = await deployer.deploy(Planet, 'earrth', { from: accounts[0] });
+    const earth = await deployer.deploy(Planet, 'earth', { from: accounts[0] });
     await ens.setSubnodeOwner(namehash('planet.eth'), "0x" + sha3('earth'), accounts[0], { from: accounts[0] })
     await ens.setResolver(earthhNode, resolver.address, { from: accounts[0] });
     await resolver.setAddr(earthhNode, earth.address, { from: accounts[0] });

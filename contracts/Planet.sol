@@ -7,13 +7,13 @@ Simple demo contract for a planet
 
 contract Planet {
     string public name;
-    
+
     constructor  (string memory _name) public {
         name = _name;
     }
 
     /**
-    @param 
+    @param  reverseRegistrar Address of ReverseRegistrar
      */
     function register( ReverseRegistrar reverseRegistrar) public {
         reverseRegistrar.setName(string(abi.encodePacked(name, '.planet.eth')));
